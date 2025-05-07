@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: smart-agent
+  ai:
+    ollama:
+      chat:
+        model: gemma3
+  datasource:
+    url: jdbc:postgresql://localhost:5432/memory
+    username: memory_user
+    password: memory_password
