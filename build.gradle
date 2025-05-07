@@ -30,13 +30,11 @@ repositories {
 
 ext {
     set('springAiVersion', "1.0.0-SNAPSHOT")
-    set('springModulithVersion', "1.3.5")
 }
 
 dependencies {
     implementation 'org.springframework.ai:spring-ai-starter-mcp-client'
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
-    implementation 'org.springframework.modulith:spring-modulith-starter-core'
 
     compileOnly 'org.projectlombok:lombok'
 
@@ -48,14 +46,12 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.modulith:spring-modulith-starter-test'
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 dependencyManagement {
     imports {
-        mavenBom "org.springframework.modulith:spring-modulith-bom:${springModulithVersion}"
         mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
     }
 }
