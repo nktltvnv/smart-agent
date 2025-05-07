@@ -1,5 +1,12 @@
+name: smart-agent-compose
 services:
-  ollama:
-    image: 'ollama/ollama:latest'
+
+  memory-database:
+    image: postgres:17.4
+    container_name: memory-database
+    environment:
+      - POSTGRES_DB=memory
+      - POSTGRES_USER=memory_user
+      - POSTGRES_PASSWORD=memory_password
     ports:
-      - '11434'
+      - "5432:5432"

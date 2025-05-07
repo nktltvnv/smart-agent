@@ -35,17 +35,21 @@ ext {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
-    implementation 'org.springframework.ai:spring-ai-starter-mcp-client'
+    // Spring AI
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
+    implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-jdbc'
+    implementation 'org.springframework.ai:spring-ai-starter-mcp-client'
 
     compileOnly 'org.projectlombok:lombok'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-//    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
-//    developmentOnly 'org.springframework.ai:spring-ai-spring-boot-docker-compose'
+    developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
+    developmentOnly 'org.springframework.ai:spring-ai-spring-boot-docker-compose'
 
     annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     annotationProcessor 'org.projectlombok:lombok'
+
+    runtimeOnly 'org.postgresql:postgresql:42.7.5'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'io.projectreactor:reactor-test'
