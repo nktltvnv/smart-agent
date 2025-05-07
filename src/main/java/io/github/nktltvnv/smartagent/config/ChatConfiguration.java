@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class ChatClientConfiguration {
+public class ChatConfiguration {
 
     @Bean
     public ChatClient chatClient(final ChatModel chatModel, final ChatMemory chatMemory) {
