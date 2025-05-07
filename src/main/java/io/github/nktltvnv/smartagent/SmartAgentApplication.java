@@ -9,5 +9,4 @@ public class SmartAgentApplication {
     public static void main(String[] args) {
         SpringApplication.run(SmartAgentApplication.class, args);
     }
-
 }
