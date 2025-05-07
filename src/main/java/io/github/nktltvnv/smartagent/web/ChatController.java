@@ -1,10 +1,11 @@
 package io.github.nktltvnv.smartagent.web;
 
 import lombok.RequiredArgsConstructor;
+import reactor.core.publisher.Flux;
 
 import org.springframework.ai.chat.model.ChatModel;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,9 +16,8 @@ public class ChatController {
 
     private final ChatModel chatModel;
 
-    @PostMapping
-    public ResponseEntity<String> chat() {
-        var response = chatModel.call("Hi, how are you?");
-        return ResponseEntity.ok(response);
+    @PostMapping("/stream")
+    public Flux<String> chat(@RequestBody final String message) {
+        return chatModel.stream(message);
     }
 }
