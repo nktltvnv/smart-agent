@@ -3,7 +3,7 @@ package io.github.nktltvnv.smartagent.web;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Flux;
 
-import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class ChatController {
 
-    private final ChatModel chatModel;
+    private final ChatClient chatClient;
 
     @PostMapping("/stream")
-    public Flux<String> chat(@RequestBody final String message) {
-        return chatModel.stream(message);
+    public Flux<String> stream(@RequestBody final String message) {
+        return chatClient.prompt().user(message).stream().content();
     }
 }
