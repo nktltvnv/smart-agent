@@ -1,4 +1,4 @@
-package io.github.nktltvnv.smartagent.web;
+package io.github.nktltvnv.smartagent.controller;
 
 import java.security.Principal;
 
@@ -26,7 +26,7 @@ public class ChatController {
     }
 
     @PostMapping("/stream/personalized")
-    public Flux<String> stream(@RequestBody final String message, @AuthenticationPrincipal Principal principal) {
+    public Flux<String> stream(@RequestBody final String message, @AuthenticationPrincipal final Principal principal) {
         return chatService.stream(message, principal);
     }
 }
