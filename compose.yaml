@@ -5,8 +5,8 @@ services:
     image: postgres:17.4
     container_name: memory-database
     environment:
-      - POSTGRES_DB=memory
-      - POSTGRES_USER=memory_user
-      - POSTGRES_PASSWORD=memory_password
+      - POSTGRES_DB=${PG_DB:-memory}'
+      - POSTGRES_USER=${PG_USER:-memory_user}
+      - POSTGRES_PASSWORD=${PG_PASSWORD:-memory_password}
     ports:
       - "5432:5432"

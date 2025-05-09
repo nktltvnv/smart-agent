@@ -4,8 +4,8 @@ spring:
   ai:
     ollama:
       chat:
-        model: gemma3
+        model: ${CHAT_MODEL:gemma3}
   datasource:
-    url: jdbc:postgresql://localhost:5432/memory
-    username: memory_user
-    password: memory_password
+    url: jdbc:postgresql://${PG_HOST:localhost}:${PG_PORT:5432}/${PG_DB:memory}
+    username: ${PG_USER:memory_user}
+    password: ${PG_PASSWORD:memory_password}
