@@ -29,10 +29,10 @@ public class SecurityConfiguration {
 
     protected ServerHttpSecurity defaultSecurity(final ServerHttpSecurity http) {
         return http.authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/chat/stream/personalized")
-                        .authenticated()
+                        .pathMatchers("/anon/**")
+                        .permitAll()
                         .anyExchange()
-                        .permitAll())
+                        .authenticated())
                 .cors(ServerHttpSecurity.CorsSpec::disable)
                 .csrf(ServerHttpSecurity.CsrfSpec::disable);
     }

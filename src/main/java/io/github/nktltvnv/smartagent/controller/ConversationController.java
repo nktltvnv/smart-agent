@@ -11,22 +11,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.github.nktltvnv.smartagent.service.ChatService;
+import io.github.nktltvnv.smartagent.service.ConversationService;
 
 @RestController
-@RequestMapping("/chat")
+@RequestMapping("/conversation")
 @RequiredArgsConstructor
-public class ChatController {
+public class ConversationController {
 
-    private final ChatService chatService;
+    private final ConversationService conversationService;
 
-    @PostMapping("/stream")
-    public Flux<String> stream(@RequestBody final String message) {
-        return chatService.stream(message);
-    }
-
-    @PostMapping("/stream/personalized")
+    @PostMapping
     public Flux<String> stream(@RequestBody final String message, @AuthenticationPrincipal final Principal principal) {
-        return chatService.stream(message, principal);
+        return conversationService.stream(message, principal);
     }
 }

@@ -12,11 +12,10 @@ import io.github.nktltvnv.smartagent.util.constant.SecurityConstant;
 public class SecurityService {
 
     public Optional<String> getCurrentUserId(final Principal principal) {
-        if (principal instanceof JwtAuthenticationToken token) {
-            return Optional.of(token.getTokenAttributes()
-                    .get(SecurityConstant.JWT_USER_ID_KEY)
-                    .toString());
-        }
-        return Optional.empty();
+        return principal instanceof JwtAuthenticationToken jwt
+                ? Optional.of(jwt.getTokenAttributes()
+                        .get(SecurityConstant.JWT_USER_ID_KEY)
+                        .toString())
+                : Optional.empty();
     }
 }
