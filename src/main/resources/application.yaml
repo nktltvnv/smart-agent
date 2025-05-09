@@ -1,10 +1,29 @@
+# ===============================
+# ✅ GENERAL CONFIGURATIONS
+# ===============================
 spring:
   application:
     name: smart-agent
+
+# ===============================
+# 🤖 CHAT CONFIGURATION (AI Model)
+# ===============================
   ai:
     ollama:
       chat:
         model: ${CHAT_MODEL:gemma3}
+
+# ===============================
+# 🔌 MCP CLIENT CONFIGURATION
+# ===============================
+    mcp:
+      client:
+        toolcallback:
+          enabled: true
+
+# ===============================
+# 🧠 CHAT MEMORY (PostgreSQL)
+# ===============================
   datasource:
     url: jdbc:postgresql://${PG_HOST:localhost}:${PG_PORT:5432}/${PG_DB:memory}
     username: ${PG_USER:memory_user}
