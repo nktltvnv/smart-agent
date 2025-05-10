@@ -1,0 +1,49 @@
+# ===============================
+# GENERAL CONFIGURATIONS
+# ===============================
+spring:
+  application:
+    name: smart-agent
+  docker:
+    compose:
+      file:
+        - compose.yaml
+        - .docker/mcp-server/compose.thinking.yaml
+
+# ===============================
+# SECURITY CONFIGURATIONS
+# ===============================
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER_URI:https://idp.example.com/issuer}
+
+# ===============================
+# CHAT CONFIGURATIONS (AI Model)
+# ===============================
+  ai:
+    ollama:
+      chat:
+        model: ${CHAT_MODEL:qwen3}
+
+# ===============================
+# MCP CLIENT CONFIGURATIONS
+# ===============================
+    mcp:
+      client:
+        type: async
+        toolcallback:
+          enabled: true
+        sse:
+          connections:
+            sequential-thinking:
+              url: ${THINKING_SERVER_URL:http://localhost:8020}
+
+# ===============================
+# CHAT MEMORY (PostgreSQL)
+# ===============================
+  datasource:
+    url: jdbc:postgresql://${PG_HOST:localhost}:${PG_PORT:15432}/${PG_DB:memory}
+    username: ${PG_USER:memory_user}
+    password: ${PG_PASSWORD:memory_password}

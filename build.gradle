@@ -37,7 +37,7 @@ dependencies {
     // Spring WebFlux
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     // Spring Security
-    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server:3.4.5'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     // Spring AI
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
     implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-jdbc'
