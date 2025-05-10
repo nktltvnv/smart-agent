@@ -12,17 +12,17 @@ import org.springframework.context.annotation.Configuration;
 public class ChatClientConfiguration {
 
     @Bean
-    @ConditionalOnMissingBean
-    public ChatClient chatClient(final ChatClient.Builder chatClientBuilder) {
-        return defaultChatClientBuilder(chatClientBuilder).build();
-    }
-
-    @Bean
     @ConditionalOnProperty(prefix = "spring.ai.mcp.client.toolcallback", name = "enabled", havingValue = "true")
     public ChatClient toolsChatClient(final ChatClient.Builder chatClientBuilder, final ToolCallbackProvider tools) {
         return defaultChatClientBuilder(chatClientBuilder)
                 .defaultToolCallbacks(tools)
                 .build();
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public ChatClient chatClient(final ChatClient.Builder chatClientBuilder) {
+        return defaultChatClientBuilder(chatClientBuilder).build();
     }
 
     protected ChatClient.Builder defaultChatClientBuilder(final ChatClient.Builder chatClientBuilder) {
