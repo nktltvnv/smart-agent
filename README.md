@@ -2,8 +2,13 @@
 
 ---
 
-Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) application, designed to run large language models
-locally via Ollama. Supports **MCP Servers** integration.
+Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) application, designed to run large language models locally via Ollama.
+
+## ✨ Features
+
+- [Conversation Memory](https://docs.spring.io/spring-ai/reference/api/chat-memory.html#_message_window_chat_memory) (last 20 messages)
+- [MCP Servers integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html)
+  - [@modelcontextprotocol/server-sequential-thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
 
 ## ⚙️ Setup
 
@@ -22,5 +27,5 @@ locally via Ollama. Supports **MCP Servers** integration.
 When selecting a model, make sure it fits your use case:
 
 - For general purpose choose [**any**](https://ollama.com/search)
-- For **Tool Calling** or **MCP Servers** integrations choose model which support [**Tools**](https://ollama.com/search?c=tools).
+- For **Tool Calling** or **MCP Servers** integration choose model which support [**Tools**](https://ollama.com/search?c=tools).
 - For **Image** or **Video** input choose the one which supports [**Vision**](https://ollama.com/search?c=vision)
