@@ -8,7 +8,8 @@ spring:
     compose:
       file:
         - compose.yaml
-        - .docker/mcp-server/compose.thinking.yaml
+        - .docker/mcp-server/sequential-thinking/compose.yaml
+        - .docker/mcp-server/web-content-fetch/compose.yaml
 
 # ===============================
 # SECURITY CONFIGURATIONS
@@ -35,10 +36,18 @@ spring:
         type: async
         toolcallback:
           enabled: true
+
+# mcp-servers.json shares some MCP Servers with sse connections so consider using either stdio or sse configuration
+# and switch client type above, or remove repeating MCP Servers.
+# https://medium.com/@vkrishnan9074/mcp-clients-stdio-vs-sse-a53843d9aabb
+#        stdio:
+#          servers-configuration: classpath:mcp/config/mcp-servers.json
         sse:
           connections:
             sequential-thinking:
-              url: ${THINKING_SERVER_URL:http://localhost:8020}
+              url: ${SEQUENTIAL_THINKING_SERVER_URL:http://localhost:8020}
+            web-crawling:
+              url: ${WEB_CONTENT_FETCH_SERVER_URL:http://localhost:8021}
 
 # ===============================
 # CHAT MEMORY (PostgreSQL)

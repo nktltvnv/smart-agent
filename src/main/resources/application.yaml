@@ -14,6 +14,15 @@ spring:
         model: ${CHAT_MODEL:gemma3}
 
 # ===============================
+# MCP CLIENT CONFIGURATIONS
+# ===============================
+    mcp:
+      client:
+        type: async
+        toolcallback:
+          enabled: true
+
+# ===============================
 # CHAT MEMORY (PostgreSQL)
 # ===============================
   datasource:
