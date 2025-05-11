@@ -10,6 +10,7 @@ Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) applicati
 - [MCP Servers integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html)
   - [Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
   - [Web Content Fetching](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)
+  - [Time with Timezone](https://github.com/modelcontextprotocol/servers/tree/main/src/time)
 
 ## ⚙️ Setup
 

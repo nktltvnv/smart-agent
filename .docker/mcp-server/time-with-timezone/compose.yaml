@@ -1,0 +1,11 @@
+services:
+
+  mcp-server-time-with-timezone:
+    image: supergateway-python-time-with-timezone
+    container_name: mcp-server-time-with-timezone
+    command: --stdio "python -m mcp_server_time"
+    build:
+      context: .docker/mcp-server/time-with-timezone
+      dockerfile: Dockerfile
+    ports:
+      - "8022:8000"
