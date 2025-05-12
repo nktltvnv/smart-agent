@@ -1,8 +1,8 @@
 services:
 
-  sequential-thinking:
+  mcp-server-sequential-thinking:
     image: supercorp/supergateway
-    container_name: sequential-thinking
+    container_name: mcp-server-sequential-thinking
     command: --stdio "npx -y @modelcontextprotocol/server-sequential-thinking"
     ports:
       - "8020:8000"
