@@ -1,8 +1,8 @@
-# 🧠 Smart Agent
-
----
+# Smart Agent
 
 Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) application, designed to run large language models locally via Ollama.
+
+---
 
 ## ✨ Features
 
@@ -12,17 +12,15 @@ Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) applicati
   - [Web Content Fetching](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)
   - [Time with Timezone](https://github.com/modelcontextprotocol/servers/tree/main/src/time)
 
+---
+
 ## ⚙️ Setup
 
-1. Install [Ollama](https://ollama.com/download) on your system.
-2. Run a model that supports tools, for example:
-```bash
-  ollama run qwen
-```
-3. Start the Spring Boot application:
-```bash
-  gradle bootRun
-```
+1. Install [Ollama](https://ollama.com/download).
+2. Run a model that supports tools: ```ollama run qwen```.
+3. Start the Spring Boot application: ```gradle bootRun```.
+
+---
 
 ## 🦙 Ollama
 
