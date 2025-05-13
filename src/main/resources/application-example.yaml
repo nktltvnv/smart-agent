@@ -10,6 +10,7 @@ spring:
         - compose.yaml
         - .docker/mcp-server/sequential-thinking/compose.yaml
         - .docker/mcp-server/web-content-fetch/compose.yaml
+        - .docker/mcp-server/time-with-timezone/compose.yaml
 
 # ===============================
 # SECURITY CONFIGURATIONS
@@ -48,6 +49,8 @@ spring:
               url: ${SEQUENTIAL_THINKING_SERVER_URL:http://localhost:8020}
             web-crawling:
               url: ${WEB_CONTENT_FETCH_SERVER_URL:http://localhost:8021}
+            time-with-timezone:
+              url: ${TIME_WITH_TIMEZONE_SERVER_URL:http://localhost:8022}
 
 # ===============================
 # CHAT MEMORY (PostgreSQL)

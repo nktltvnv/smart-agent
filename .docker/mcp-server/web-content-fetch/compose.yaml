@@ -1,7 +1,7 @@
 services:
 
   mcp-server-web-content-fetch:
-    image: supercorp/supergateway-with-python
+    image: supergateway-python-web-content-fetch
     container_name: mcp-server-web-content-fetch
     command: --stdio "python -m mcp_server_fetch"
     build:

@@ -4,10 +4,12 @@
       "command": "docker",
       "args": [
         "run",
-        "--rm",
-        "--name", "mcp-server-sequential-thinking",
-        "--label", "com.docker.compose.project=smart-agent-compose",
         "-i",
+        "--rm",
+        "--name",
+        "mcp-server-sequential-thinking",
+        "--label",
+        "com.docker.compose.project=smart-agent-compose",
         "mcp/sequentialthinking"
       ]
     },
@@ -15,11 +17,26 @@
       "command": "docker",
       "args": [
         "run",
-        "--rm",
-        "--name", "mcp-server-web-content-fetch",
-        "--label", "com.docker.compose.project=smart-agent-compose",
         "-i",
+        "--rm",
+        "--name",
+        "mcp-server-web-content-fetch",
+        "--label",
+        "com.docker.compose.project=smart-agent-compose",
         "mcp/fetch"
+      ]
+    },
+    "time": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--name",
+        "mcp-server-time-with-timezone",
+        "--label",
+        "com.docker.compose.project=smart-agent-compose",
+        "mcp/time"
       ]
     }
   }
