@@ -40,7 +40,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'
     // Spring AI
     implementation 'org.springframework.ai:spring-ai-starter-model-ollama'
-    implementation 'org.springframework.ai:spring-ai-starter-model-chat-memory-jdbc'
+    implementation "org.springframework.ai:spring-ai-starter-model-chat-memory-jdbc:${springAiVersion}"
     implementation 'org.springframework.ai:spring-ai-starter-mcp-client-webflux'
 
     compileOnly 'org.projectlombok:lombok'
