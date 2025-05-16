@@ -8,9 +8,9 @@ Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) applicati
 
 - [Conversation Memory](https://docs.spring.io/spring-ai/reference/api/chat-memory.html#_message_window_chat_memory) (last 20 messages)
 - [MCP Servers integration](https://docs.spring.io/spring-ai/reference/api/mcp/mcp-client-boot-starter-docs.html)
-  - [Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking)
-  - [Web Content Fetching](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch)
-  - [Time with Timezone](https://github.com/modelcontextprotocol/servers/tree/main/src/time)
+  - [Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) - dynamic and reflective problem-solving through a structured thinking process.
+  - [Web Content Fetching](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) - retrieve and process content from web pages.
+  - [Time with Timezone](https://github.com/modelcontextprotocol/servers/tree/main/src/time) - provides time and timezone conversion capabilities.
 
 ---
 
