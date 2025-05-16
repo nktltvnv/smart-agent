@@ -76,7 +76,7 @@ spotless {
     java {
         palantirJavaFormat()
         removeUnusedImports()
-        importOrder('java', 'javax|jakarta', '', 'org.springframework', 'io.github.nktltvnv.smartagent', '\\#')
+        importOrder('java', 'javax|jakarta', '', 'org.springframework', 'io.github.nktltvnv', '\\#')
     }
 }
 
