@@ -11,7 +11,7 @@ Smart Agent is a [**Spring AI**](https://spring.io/projects/spring-ai) applicati
   - [Sequential Thinking](https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking) - dynamic and reflective problem-solving through a structured thinking process.
   - [Web Content Fetching](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) - retrieve and process content from web pages.
   - [Time with Timezone](https://github.com/modelcontextprotocol/servers/tree/main/src/time) - provides time and timezone conversion capabilities.
-  - [Context7](https://github.com/upstash/context7) - version-specific documentation and code examples straight from the source
+  - [Context7](https://github.com/upstash/context7) - version-specific documentation and code examples straight from the source.
 
 ---
 
