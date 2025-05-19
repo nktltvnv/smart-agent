@@ -1,0 +1,8 @@
+services:
+
+  mcp-server-context7:
+    image: supercorp/supergateway
+    container_name: mcp-server-context7
+    command: --stdio "npx -y @upstash/context7-mcp@latest"
+    ports:
+      - "8023:8000"

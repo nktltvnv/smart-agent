@@ -38,6 +38,19 @@
         "com.docker.compose.project=smart-agent-compose",
         "mcp/time"
       ]
+    },
+    "Сontext7": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "--name",
+        "mcp-server-context7",
+        "--label",
+        "com.docker.compose.project=smart-agent-compose",
+        "mcp/context7"
+      ]
     }
   }
 }

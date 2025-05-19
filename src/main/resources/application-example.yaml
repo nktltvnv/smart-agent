@@ -11,6 +11,7 @@ spring:
         - .docker/mcp-server/sequential-thinking/compose.yaml
         - .docker/mcp-server/web-content-fetch/compose.yaml
         - .docker/mcp-server/time-with-timezone/compose.yaml
+        - .docker/mcp-server/context7/compose.yaml
 
 # ===============================
 # SECURITY CONFIGURATIONS
@@ -51,6 +52,8 @@ spring:
               url: ${WEB_CONTENT_FETCH_SERVER_URL:http://localhost:8021}
             time-with-timezone:
               url: ${TIME_WITH_TIMEZONE_SERVER_URL:http://localhost:8022}
+            context7:
+              url: ${CONTEXT7_SERVER_URL:http://localhost:8023}
 
 # ===============================
 # CHAT MEMORY (PostgreSQL)
